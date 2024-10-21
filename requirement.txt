@@ -1,0 +1,8 @@
+streamlit
+pandas
+matplotlib
+seaborn
+langchain-experimental
+langchain
+langchain-groq
+python-dotenv

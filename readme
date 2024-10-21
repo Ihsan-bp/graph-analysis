@@ -1,0 +1,44 @@
+# Graph Generation from CSV Data
+
+
+### Overview
+This project is a Streamlit application designed to allow users to upload CSV files, receive suggestions for possible plots or graphs, and generate visualizations based on user-selected prompts. The application leverages LangChain agents with the Groq LLM for suggesting plot ideas, and utilizes a Python REPL tool for generating and displaying the plots.
+
+### Features
+* CSV File Upload: Users can upload CSV files for analysis.
+* Plot Suggestions: The system provides pre-defined plot suggestions based on the structure and content of the uploaded data, using a   Large Language Model (LLM) from Groq.
+* Dynamic Plot Generation: Based on the selected prompt, the application generates a plot using Python libraries like Matplotlib and Seaborn.
+* Error Handling: The app provides error feedback if the generated code fails to produce a valid plot.
+
+### How It Works
+* Upload CSV File: The user uploads a CSV file through the interface.
+* Data Analysis & Plot Suggestions: Using a pre-trained Groq-based LLM, the application analyzes the uploaded data and provides 
+suggestions for possible plots.
+* Plot Selection: The user can selects a plot from the suggestions.
+* Graph Generation: The LangChain agent, using a Python REPL tool, generates the code to create the graph and displays the output in the app.
+
+### Technologies Used
+1. Streamlit: For building the web interface.
+2. Pandas: For data manipulation and cleaning.
+3. Matplotlib & Seaborn: For graph and plot generation.
+4. LangChain: To integrate LLM-based tools for generating prompts and plots.
+5. Groq LLM: Used for structured output and plot suggestions.
+6. PythonAstREPLTool: A tool that allows for dynamic execution of Python code to generate the graphs.
+
+### How to Run
+1. Install the required dependencies using the following command:
+pip install -r requirements.txt
+
+2. Run the Streamlit app:
+streamlit run main.py
+
+### Project Structure
+1. main.py: The main application file that handles file uploads, plot suggestions, and graph generation.
+2. graphsuggestion.py: Contains logic for generating plot suggestions using Groq LLM.
+3. .env: API keys for accessing the Groq and OpenAI models.
+
+### Future Enhancements
+1. Support for more advanced data analysis features.
+2. Improved error handling and user interface refinements.
+3. Integration of additional plotting libraries for more visualization options.
+4. Completly build an agent that can take csv and generate graphs and plots using more advanced langgraph
